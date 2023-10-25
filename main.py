@@ -2,6 +2,7 @@
 def encode(password):
     new_pass = ""
     for char in range(int(password)):
+
         if char == 7:
             new_pass += "0"
         elif char == 8:
@@ -22,9 +23,9 @@ while menu == True:
     user_input = input("Please enter an option: ")
     if user_input == '1':
         password = input("Please enter a password to encode: ")
-        encode(password)
+        new_pass = encode(password)
         print("Your password has been encoded and stored!")
     elif user_input == "2":
-        print("this is where you work")
+        print(f"The encoded password is {new_pass}, and the original password is {password}.")
     else:
         menu = False
